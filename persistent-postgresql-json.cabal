@@ -1,0 +1,50 @@
+name:                persistent-postgresql-json
+version:             0.1.0.0
+synopsis:            JSON/JSONB helpers and types for persistent-postgresql
+description:         JSON/JSONB helpers and types for persistent-postgresql
+license:             BSD3
+license-file:        LICENSE
+author:              Christopher Reichert
+maintainer:          creichert07@gmail.com
+copyright:           (c) 2015 Christopher Reichert
+category:            Database
+build-type:          Simple
+cabal-version:       >=1.10
+
+library
+  exposed-modules:     Database.Persist.Postgresql.Json
+  default-language:    Haskell2010
+  build-depends:       base                 >=4.7
+                     , aeson
+                     , mtl
+                     , transformers
+                     , bytestring           >=0.10
+                     , unordered-containers >=0.2
+                     , scientific           >=0.3
+                     , text                 >=1.2
+                     , time                 >=1.4
+                     , vector               >=0.10
+                     , persistent-template  >=2.1
+                     , persistent
+
+
+test-suite spec
+  type:               exitcode-stdio-1.0
+  main-is:            Spec.hs
+  hs-source-dirs:     test
+  ghc-options:        -Wall
+  default-language:   Haskell2010
+  build-depends:
+                base                   == 4.*
+              , hspec
+              , HUnit
+              , aeson
+              , resourcet
+              , persistent             >= 2.1
+              , persistent-template    >= 2.1
+              , persistent-postgresql  >= 2.1
+              , text                   >= 1.2
+              , monad-logger
+              , fast-logger
+              , transformers
+              , persistent-jsonb
