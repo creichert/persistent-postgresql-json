@@ -47,4 +47,4 @@ test-suite spec
               , monad-logger
               , fast-logger
               , transformers
-              , persistent-jsonb
+              , persistent-postgresql-json
