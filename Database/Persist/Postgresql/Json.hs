@@ -81,7 +81,7 @@ infixr 6 @>., <@.
     specifier = BackendSpecificFilter "@>"
     jval = Left $ Jsonb val
 
--- | Does the left JSON value contain within it the right value?
+-- | Does the right JSON value contain within it the left value?
 --
 -- > '{"a":1, "b":2}'::jsonb <@ '{"b":2}'::jsonb
 --
