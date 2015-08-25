@@ -91,7 +91,7 @@ specs :: Spec
 specs = do
   describe "persistent-postgresql json" $ do
     it "inserts json" $ db $ do
-      let bar= Bar pjson
+      let bar = Bar pjson
       k <- insert bar
       bars <- selectList ([] :: [Filter Bar]) []
       bars @== [Entity k bar]
